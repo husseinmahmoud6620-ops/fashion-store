@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ========== Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ========== Variables: كل ألوان الموقع في مكان واحد ========== */
+:root {
+    --main-color: #f34333;
+    --main-dark: #d9372a;      /* hover للون الأساسي */
+    --p_color: #7b7b7b;
+    --bg-color: #f3f3f3;
+    --white-color: #fff;
+    --color_heading: #121416;
+    --border-color: #e5e5e5;
+    --sale-color: #e51a1a;
+}
+
+/* ========== Base ========== */
+p {
+    color: var(--p_color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color_heading);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* FIX: كان هنا height: 120px على كل الصور، وده بيبوّظ اللوجو وصور المنتجات */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input, select, button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1350px;
+}
+
+/* ========== Buttons ========== */
+.btn {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--main-dark);
+}
+
+.btn:focus-visible,
+.icon a:focus-visible {
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
+}
+
+/* ========== Header ========== */
+/* FIX: شلنا display:flex من header نفسه، لأنه كان بيخلي .top_header ياخد عرض محتواه بس */
+header {
+    background: var(--white-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .top_header {
+    padding: 15px 0;
+}
+
+header .top_header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+header .top_header .logo {
+    flex-shrink: 0;
+}
+
+/* FIX: الارتفاع محدد والعرض تلقائي عشان اللوجو ميتمطّش */
+header .top_header .logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Search box */
+header .top_header .search_box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 650px;
+    height: 55px;
+    border-radius: 2px;
+    background: var(--bg-color);
+}
+
+header .top_header .search_box select,
+header .top_header .search_box input {
+    height: 55px;
+    background: var(--bg-color);
+    font-size: 16px;
+}
+
+header .top_header .search_box select {
+    width: 150px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+header .top_header .search_box input {
+    flex: 1;
+    min-width: 0;
+    padding: 5px 15px;
+}
+
+header .top_header .search_box button {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    background: var(--main-color);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+header .top_header .search_box button:hover {
+    background: var(--main-dark);
+}
+
+header .top_header .search_box button i {
+    color: var(--white-color);
+}
+
+/* Header icons */
+header .top_header .header_icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .top_header .header_icons .icon {
+    position: relative;
+}
+
+/* FIX: اللينك كان بياخد اللون البنفسجي الافتراضي للمتصفح */
+header .top_header .header_icons .icon a {
+    display: block;
+    color: var(--color_heading);
+}
+
+header .top_header .header_icons .icon a:hover {
+    color: var(--main-color);
+}
+
+header .top_header .header_icons .icon i {
+    font-size: 24px;
+}
+
+header .top_header .header_icons .icon .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 11px;
+    border-radius: 50%;
+}
+
+/* Navigation */
+header .main_nav .container {
+    display: flex;
+    gap: 32px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+header .main_nav a {
+    color: var(--color_heading);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header .main_nav a:hover {
+    color: var(--main-color);
+}
+
+header .main_nav a.sale {
+    color: var(--sale-color);
+}
+
+/* ========== Hero ========== */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--color_heading);
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* FIX: القواعد العامة h1 و p كانت بتغلب على color بتاع .hero، فلازم نحدد اللون هنا مباشرة */
+.hero h1 {
+    color: var(--white-color);
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+}
+
+/* ========== Products ========== */
+.products {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: var(--main-color);
+    font-weight: 700;
+    margin: 8px 0 14px;
+}
+
+.add-to-cart {
+    width: 100%;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+    header .top_header .container {
+        flex-wrap: wrap;
+    }
+
+    header .top_header .search_box {
+        order: 3;
+        max-width: none;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    header .main_nav .container {
+        gap: 20px;
+        overflow-x: auto;
+    }
+}
+
+/* Quantity control (+ and - buttons) */
+.qty-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  opacity: 0.85;
+}
+
+.qty-value {
+  min-width: 24px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================
+   Cart Drawer
+   ========================================= */
+
+/* Dark background behind the drawer */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Stop the page from scrolling while the drawer is open */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* The drawer itself (hidden off-screen to the right) */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.cart-drawer.open {
+  transform: translateX(0);
+}
+
+/* Drawer header */
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-header h2 {
+  font-size: 22px;
+}
+
+.close-cart {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Items list (scrolls if there are many items) */
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.cart-empty {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+}
+
+/* One item row */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.cart-item-price {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Smaller + / - buttons inside the drawer */
+.cart-item .qty-control {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.cart-item .qty-btn {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+
+.cart-item .qty-value {
+  font-size: 16px;
+}
+
+/* Trash button */
+.remove-item {
+  border: none;
+  background: none;
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  color: #f44336;
+}
+
+/* Footer with the total and the checkout button */
+.cart-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.checkout-btn {
+  width: 100%;
+}
+
+/* Message shown when no products match the search */
+.no-results {
+  grid-column: 1 / -1;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+/* Sale: old price and discount badge */
+.product-card {
+  position: relative;
+}
+
+.old-price {
+  margin-right: 6px;
+  color: #999;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Active link in the nav */
+.main_nav a.active {
+  font-weight: 700;
+  border-bottom: 2px solid #f44336;
+}
+
+/* Favourite (heart) button on the product card */
+.fav-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  font-size: 17px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fav-btn:hover {
+  transform: scale(1.1);
+}
+
+.fav-btn.active {
+  color: #f44336;
+}
+
+/* Checkout button when the cart is empty */
+.checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   Checkout: customer details form
+   ========================================= */
+
+/* Let the footer scroll on small screens when the form is open */
+.cart-footer {
+  max-height: 65%;
+  overflow-y: auto;
+}
+
+/* The form is hidden until the customer clicks Checkout */
+.checkout-form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.checkout-form.show {
+  display: flex;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: #f44336;
+}
+
+/* Error message under the fields */
+.checkout-error {
+  min-height: 18px;
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+/* Checkout button when the cart is empty */
+.checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.checkout-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.checkout-form select:focus {
+  outline: none;
+  border-color: #f44336;
+}
+
+/* =========================================
+   Language button + Arabic (RTL) fixes
+   ========================================= */
+
+/* Language button in the header */
+.lang-toggle {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lang-toggle:hover {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+/* Arabic font (add the Cairo font link in index.html, see the notes) */
+[dir="rtl"] body,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] button {
+  font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* The cart drawer opens from the left side in Arabic */
+[dir="rtl"] .cart-drawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+[dir="rtl"] .cart-drawer.open {
+  transform: translateX(0);
+}
+
+/* Swap the sale badge and the heart button */
+[dir="rtl"] .sale-badge {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .fav-btn {
+  right: auto;
+  left: 12px;
+}
+
+/* Space next to the old price */
+[dir="rtl"] .old-price {
+  margin-right: 0;
+  margin-left: 6px;
+}
+
+/* Subtotal and shipping lines above the total */
+.cart-summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* =========================================
+   Responsive: tablet and mobile
+   IMPORTANT: paste this at the VERY END of style.css
+   so it overrides the desktop styles
+   ========================================= */
+
+/* Never let the page scroll sideways */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ---------- Tablet (992px and smaller) ---------- */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+
+/* ---------- Mobile (768px and smaller) ---------- */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Header: logo + icons on the first row, search box on the second row */
+  .top_header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .top_header .logo {
+    order: 1;
+  }
+
+  .top_header .logo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .header_icons {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .search_box {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  /* 16px stops iPhones from zooming in when a field is tapped */
+  .search_box input,
+  .search_box select {
+    font-size: 16px;
+  }
+
+  .search_box select {
+    max-width: 120px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  /* Nav links: one row that can be swiped sideways */
+  .main_nav .container {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .main_nav .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hero banner */
+  .hero {
+    height: auto;
+    min-height: 300px;
+    padding: 50px 16px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  /* Products: two columns */
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .product-card h3 {
+    font-size: 15px;
+  }
+
+  .product-card .price {
+    font-size: 15px;
+  }
+
+  .product-card .btn {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .product-card .qty-control {
+    gap: 10px;
+  }
+
+  .fav-btn {
+    width: 34px;
+    height: 34px;
+    top: 16px;
+    right: 16px;
+    font-size: 15px;
+  }
+
+  .sale-badge {
+    top: 16px;
+    left: 16px;
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+
+  [dir="rtl"] .fav-btn {
+    right: auto;
+    left: 16px;
+  }
+
+  [dir="rtl"] .sale-badge {
+    left: auto;
+    right: 16px;
+  }
+}
+
+
+/* ---------- Small phones (480px and smaller) ---------- */
+@media (max-width: 480px) {
+  /* The cart drawer takes the full screen width */
+  .cart-drawer {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .cart-items,
+  .cart-header,
+  .cart-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Bigger touch targets inside the drawer */
+  .cart-item .qty-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .remove-item {
+    padding: 8px;
+  }
+
+  /* 16px stops iPhones from zooming in when a field is tapped */
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-form select {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+/* Side spacing for the nav links on mobile */
+@media (max-width: 768px) {
+  .main_nav .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}

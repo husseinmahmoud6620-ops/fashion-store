@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion Store</title>
+    <link rel="icon" href="img/logo-fashion_store2.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="top_header">
+
+            <div class="container">
+
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="img/logo-fashion_store2.jpg" alt="Fashion Store logo with a stylized bag icon and elegant lettering in warm beige and brown tones on a clean background">
+                </a>
+
+
+                <!-- Search Box -->
+                <form action="" class="search_box">
+
+                    <select id="category" name="category">
+                        <option value="All Categories">All Categories</option>
+                        <option value="Men">Men</option>
+                        <option value="Women">Women</option>
+                        <option value="Kids">Kids</option>
+                        <option value="T-Shirts">T-Shirts</option>
+                        <option value="Shirts">Shirts</option>
+                        <option value="Pants">Pants</option>
+                        <option value="Jeans">Jeans</option>
+                        <option value="Dresses">Dresses</option>
+                        <option value="Jackets">Jackets</option>
+                        <option value="Hoodies">Hoodies</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="Accessories">Accessories</option>
+                    </select>
+
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Search for products"
+                        required
+                    >
+
+                    <button type="submit" aria-label="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+
+
+                <!-- Header Icons -->
+                <div class="header_icons">
+
+                    <!-- Favourite -->
+                    <div class="icon">
+                        <a href="#" aria-label="Favourites">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count_favourite">0</span>
+                        </a>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="icon">
+                        <a href="#" aria-label="Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="count count_item_header">0</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Navigation: -->
+        <nav class="main_nav">
+            <div class="container">
+                <a href="#">Home</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#" class="sale">Sale</a>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section: -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Summer Sale up to 50% Off</h1>
+            <p>Discover the best products at the best prices</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+
+    <!-- Products Section: -->
+    <section class="products" id="products">
+        <div class="container">
+
+            <h2 class="section-title">Featured Products</h2>
+
+            <div class="products-grid">
+
+                <!-- Product Card: -->
+                <article class="product-card">
+                    <img src="img/t-shirt.jpg" alt="Classic white cotton T-shirt with a simple crew neck and relaxed fit displayed on a clean neutral studio background">
+                    <h3>Classic T-Shirt</h3>
+                    <p class="price">$19.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/slim-jeans.jpg" alt="Slim fit dark blue jeans with a tapered leg and classic five pocket design shown against a plain studio background">
+                    <h3>Slim Fit Jeans</h3>
+                    <p class="price">$39.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/hodies.jpg" alt="Charcoal hooded sweatshirt with a soft fleece finish and front pocket displayed on a simple neutral background">
+                    <h3>Hooded Sweatshirt</h3>
+                    <p class="price">$44.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/leather-sneakers.jpg" alt="Neutral tan leather sneakers with a sleek profile and cushioned sole set on a clean studio background">
+                    <h3>Leather Sneakers</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/accessories.jpg" alt="Gold framed sunglasses with dark lenses presented on a simple studio backdrop and a minimal fashion aesthetic">
+                    <h3>Glass Accessories</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/pants.jpg" alt="Light beige women pants with a tailored waist and flowing silhouette set on a plain neutral background">
+                    <h3>Pants For Women</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/pants2.jpg" alt="Dark charcoal men pants with a structured fit and subtle pleats displayed on a clean studio background">
+                    <h3>Pants For Men</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/dresses.jpg" alt="Elegant navy dress with a fitted bodice and flowing skirt presented on a clean studio backdrop with a polished minimalist feel">
+                    <h3>Dress</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/bags.jpg" alt="Structured tan handbag with a smooth leather finish and handle displayed on a neutral surface with a chic minimalist mood">
+                    <h3>Bags</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="img/jeans.jpg" alt="Dark blue slim jeans with a classic fit and sturdy denim texture shown against a plain neutral studio background">
+                    <h3>Slim Jeans</h3>
+                    <p class="price">$59.99</p>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cart Drawer -->
+<div class="overlay" data-action="close-cart"></div>
+
+<aside class="cart-drawer" aria-label="Shopping cart">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart" data-action="close-cart" aria-label="Close cart">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+
+    <div class="cart-total">
+        <span>Total</span>
+        <strong class="total-price">$0.00</strong>
+    </div>
+
+    <!-- Customer details (shown after the first click on Checkout) -->
+    <div class="checkout-form">
+        <input type="text" id="customer-name" placeholder="Full name" autocomplete="name">
+        <input type="tel" id="customer-phone" placeholder="Phone number" autocomplete="tel">
+        <select id="customer-governorate"></select>
+        <textarea id="customer-address" rows="2" placeholder="Delivery address" autocomplete="street-address"></textarea>
+        <textarea id="customer-notes" rows="2" placeholder="Notes (size, colour...) - optional"></textarea>
+        <p class="checkout-error"></p>
+    </div>
+
+    <button class="btn checkout-btn">Checkout</button>
+
+</div>
+
+</aside>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
