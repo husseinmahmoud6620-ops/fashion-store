@@ -49,6 +49,12 @@ fashion-store/
 └── screenshots/    # Images used in this README
 ```
 
+## About Me
+
+Hi, I'm Hussein, a Business Technology student (BIS specialization) at the Canadian International College (CIC) and a beginner frontend developer.
+
+Fashion Store is one of my first practical projects. I built it step by step while learning HTML, CSS and JavaScript, and I designed it for customers in Egypt: prices in EGP, Arabic and English, and ordering through WhatsApp. I'm still improving it and adding new features.
+
 ## Contact
 
 - Email: [husseinmahmoud6620@gmail.com](mailto:husseinmahmoud6620@gmail.com)
