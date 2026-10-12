@@ -1,4 +1,4 @@
-# Fashion Store
+ # Fashion Store
 
 A responsive fashion e-commerce website with a shopping cart, favourites, Arabic / English support, and WhatsApp checkout, built with HTML, CSS and vanilla JavaScript.
 
@@ -52,3 +52,4 @@ fashion-store/
 ## Contact
 
 - Email: [husseinmahmoud6620@gmail.com](mailto:husseinmahmoud6620@gmail.com)
+- Phone: 01042219540
